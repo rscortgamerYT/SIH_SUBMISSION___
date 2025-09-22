@@ -1,0 +1,145 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* Updated to black and green theme for civic reporting app */
+  --background: #000000; /* Black Background */
+  --foreground: #ffffff; /* White Text */
+  --card: #1a1a1a; /* Dark Card Background */
+  --card-foreground: #ffffff; /* Card Text */
+  --popover: #1a1a1a; /* Popover Background */
+  --popover-foreground: #ffffff; /* Popover Text */
+  --primary: #00ff66; /* Green Accent */
+  --primary-foreground: #000000; /* Text on Primary Elements */
+  --secondary: #ffffff; /* White for Secondary Elements */
+  --secondary-foreground: #000000; /* Text on Secondary Elements */
+  --muted: #333333; /* Muted Background */
+  --muted-foreground: #ffffff; /* Muted Text */
+  --accent: #00ff66; /* Accent Color */
+  --accent-foreground: #000000; /* Text on Accent Elements */
+  --destructive: #ff4c4c; /* Red for Destructive Actions */
+  --destructive-foreground: #ffffff; /* Text on Destructive Elements */
+  --border: #444444; /* Border Color */
+  --input: #222222; /* Input Field Background */
+  --ring: rgba(0, 255, 102, 0.5); /* Ring Color */
+  --chart-1: #00ff66; /* Chart Color 1 */
+  --chart-2: #ffffff; /* Chart Color 2 */
+  --chart-3: #444444; /* Chart Color 3 */
+  --chart-4: #666666; /* Chart Color 4 */
+  --chart-5: #888888; /* Chart Color 5 */
+  --radius: 0.5rem; /* Corner Rounding */
+  --sidebar: #1a1a1a; /* Sidebar Background */
+  --sidebar-foreground: #ffffff; /* Sidebar Text */
+  --sidebar-primary: #00ff66; /* Sidebar Primary Color */
+  --sidebar-primary-foreground: #000000; /* Sidebar Primary Text */
+  --sidebar-accent: #444444; /* Sidebar Accent */
+  --sidebar-accent-foreground: #ffffff; /* Sidebar Accent Text */
+  --sidebar-border: #333333; /* Sidebar Border */
+  --sidebar-ring: rgba(0, 255, 102, 0.5); /* Sidebar Ring */
+}
+
+.dark {
+  /* Dark mode uses same colors as root for consistent black/green theme */
+  --background: #000000;
+  --foreground: #ffffff;
+  --card: #1a1a1a;
+  --card-foreground: #ffffff;
+  --popover: #1a1a1a;
+  --popover-foreground: #ffffff;
+  --primary: #00ff66;
+  --primary-foreground: #000000;
+  --secondary: #ffffff;
+  --secondary-foreground: #000000;
+  --muted: #333333;
+  --muted-foreground: #ffffff;
+  --accent: #00ff66;
+  --accent-foreground: #000000;
+  --destructive: #ff4c4c;
+  --destructive-foreground: #ffffff;
+  --border: #444444;
+  --input: #222222;
+  --ring: rgba(0, 255, 102, 0.5);
+  --chart-1: #00ff66;
+  --chart-2: #ffffff;
+  --chart-3: #444444;
+  --chart-4: #666666;
+  --chart-5: #888888;
+  --sidebar: #1a1a1a;
+  --sidebar-foreground: #ffffff;
+  --sidebar-primary: #00ff66;
+  --sidebar-primary-foreground: #000000;
+  --sidebar-accent: #444444;
+  --sidebar-accent-foreground: #ffffff;
+  --sidebar-border: #333333;
+  --sidebar-ring: rgba(0, 255, 102, 0.5);
+}
+
+@theme inline {
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Added custom scrollbar styling for better aesthetics */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1a1a1a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #00ff66;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #00cc52;
+}
